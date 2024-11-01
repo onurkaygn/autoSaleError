@@ -1,0 +1,28 @@
+﻿@model OtoServisSatis.Entities.Rol
+
+@{
+    ViewData["Title"] = "Rol Ekle";
+}
+
+<div class="container mt-5">
+    <div class="card shadow-sm">
+        <div class="card-header bg-primary text-white">
+            <h1 class="h4 mb-0">Rol Ekle</h1>
+        </div>
+        <div class="card-body">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <div class="form-group">
+                    <label asp-for="Adi" class="control-label font-weight-bold"></label>
+                    <input asp-for="Adi" class="form-control" />
+                    <span asp-validation-for="Adi" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mt-3">
+                    <input type="submit" value="Ekle" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

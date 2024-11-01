@@ -1,0 +1,35 @@
+﻿@model OtoServisSatis.Entities.Rol
+
+@{
+    ViewData["Title"] = "Rol Sil";
+}
+
+<div class="container mt-5">
+    <div class="card shadow-sm">
+        <div class="card-header bg-danger text-white">
+            <h1 class="h4 mb-0">Rol Sil</h1>
+        </div>
+        <div class="card-body">
+            <h4>Rol Detayları</h4>
+            <hr />
+            <dl class="row">
+                <dt class="col-sm-3 font-weight-bold">
+                    @Html.DisplayNameFor(model => model.Adi)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.Adi)
+                </dd>
+            </dl>
+
+            <form asp-action="Delete" class="mt-4">
+                <input type="hidden" asp-for="Id" />
+                <button type="submit" class="btn btn-danger">
+                    <i class="fas fa-trash-alt"></i> Sil
+                </button>
+                <a class="btn btn-secondary ms-2" asp-action="Index">
+                    <i class="fas fa-arrow-left"></i> Listeye Dön
+                </a>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,32 @@
+﻿@model OtoServisSatis.Entities.Rol
+
+@{
+    ViewData["Title"] = "Rol Düzenle";
+}
+
+<div class="container mt-5">
+    <div class="card shadow-sm">
+        <div class="card-header bg-warning text-white">
+            <h1 class="h4 mb-0">Rol Düzenle</h1>
+        </div>
+        <div class="card-body">
+            <form asp-action="Edit">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="Id" />
+
+                <div class="form-group">
+                    <label asp-for="Adi" class="control-label font-weight-bold"></label>
+                    <input asp-for="Adi" class="form-control" />
+                    <span asp-validation-for="Adi" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mt-3">
+                    <input type="submit" value="Kaydet" class="btn btn-primary" />
+                    <a class="btn btn-secondary ms-2" asp-action="Index">
+                        <i class="fas fa-arrow-left"></i> Listeye Dön
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
